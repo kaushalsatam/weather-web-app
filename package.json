@@ -1,0 +1,25 @@
+{
+  "name": "weather-web-app",
+  "version": "1.0.0",
+  "description": "Project - Weather Web Application",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kaushalsatam/weather-web-app.git"
+  },
+  "author": "Kaushal Satam",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kaushalsatam/weather-web-app/issues"
+  },
+  "homepage": "https://github.com/kaushalsatam/weather-web-app#readme",
+  "dependencies": {
+    "axios": "^1.6.8",
+    "body-parser": "^1.20.2",
+    "express": "^4.19.1"
+  }
+}
