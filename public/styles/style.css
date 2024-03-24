@@ -2,3 +2,83 @@
     font-family: "Poppins", sans-serif;
 }
 
+body{
+    background-color: #11001c;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    height: 100dvh;
+    margin: 15px;
+}
+
+header{
+    display: flex;
+    justify-content:space-between;
+    margin-bottom: 15px;
+}
+
+#logo-container{
+    display: flex;
+}
+
+#logo{
+    height: 60px;
+    display: inline;
+}
+
+div#brand-name{
+    color: whitesmoke;
+    text-align: center;
+    padding: 20px;
+}
+
+#search-box{
+    padding: 10px;
+    display: inline-flex;
+    gap: 10px;
+}
+
+#search-box > #location{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#search-box > button{
+    height: 45px;
+    width: 45px;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+div.weather-info-container{
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+div.weather-card{
+    border-radius: 25px;
+}
+
+div.weather-info-main{
+    background-color: royalblue;
+    padding: 20px;
+}
+
+div.weather-info-astronomy{
+
+}
+
+div.weather-info-forecast{
+    background-color: gray;
+    grid-row: span 2;
+}
+
+div.weather-into-forecast{
+    grid-row-start: 1;
+    grid-column-start: 2;
+    grid-row: span 3;
+}

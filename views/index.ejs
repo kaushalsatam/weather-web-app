@@ -14,28 +14,42 @@
   </head>
   <body>
     <div class="container">
-      <form action="/get-weather" method="post">
-        <input
-          type="text"
-          name="location"
-          id="location"
-          placeholder="Enter your location"
-        />
-        <input type="submit" value="Search" />
-      </form>
+      <header>
+        <div id="logo-container">
+          <img src="assets/images/weather.svg" alt="ClearVue" id="logo">
+          <div id="brand-name">ClearVue</div>
+        </div>
+        <form id="search-box" action="/get-weather" method="post">
+          <input
+            type="text"
+            name="location"
+            id="location"
+            placeholder="Enter your location"
+          />
+          <button type="submit"><img src="assets/images/search.svg" alt="Search"></button>
+        </form>
+      </header>
       <% if(locals.content) { %>
-      <div class="weather-info">
-        <h1><%= locals.content.location.name%></h1>
-        <img
-          src="<%= locals.content.current.condition.icon%>"
-          alt="Current Condition"
-        />
-        <%= locals.content.current.condition.text%>
-        <%= locals.content.current.temp_c%>°C
-        <h2>
-          <%= locals.content.location.region%>, <%=locals.content.location.country%>
-        </h2>
-      </div>
+        <div class="weather-info-container">
+          <div class="weather-info-main weather-card">
+            <h1><%= locals.content.location.name%></h1>
+            <img
+              src="<%= locals.content.current.condition.icon%>"
+              alt="Current Condition"
+            />
+            <%= locals.content.current.condition.text%>
+            <%= locals.content.current.temp_c%>°C
+            <h2>
+              <%= locals.content.location.region%>, <%=locals.content.location.country%>
+            </h2>
+          </div>
+          <div class="weather-info-forecast weather-card">
+
+          </div>
+          <div class="weather-info-astronomy weather-card">
+            
+          </div>
+        </div>
       <% } else { %>
       <span><%= locals.error %></span>
       <% } %>
