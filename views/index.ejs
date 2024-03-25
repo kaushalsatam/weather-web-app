@@ -53,14 +53,30 @@
             <div class="other-conditions">
               <div><span>Wind</span> <img src="/assets/images/wind.svg" alt="Wind"> <%= locals.content.current.wind_kph%> kph</div>
               <div><span>Humidity</span> <img src="/assets/images/droplets.svg" alt="Humidity"> <%= locals.content.current.humidity%>%</div>
-              <div><span>Chance of rain</span> <img src="/assets/images/cloud-rain.svg" alt="Chance of rain"> <%= locals.content.forecast.forecastday[0].day.daily_will_it_rain%>%</div>
+              <div><span>Chance of rain</span> <img src="/assets/images/cloud-rain.svg" alt="Chance of rain"> <%= locals.content.forecast.forecastday[0].day.daily_chance_of_rain%>%</div>
             </div>
           </div>
           <div class="weather-info-forecast weather-card">
-
+            
           </div>
           <div class="weather-info-astronomy weather-card">
-            
+            <div>
+              <h2>Sunrise</h2>
+              <h3>
+                <!-- <span>Sunrise</span> -->
+                <img src="/assets/images/sunrise.svg" alt="">
+                <%= locals.content.forecast.forecastday[0].astro.sunrise%>
+              </h3>
+            </div>
+            <hr>
+            <div>
+              <h2>Sunset</h2>
+              <h3>
+                <!-- <span>Sunset</span> -->
+                <img src="/assets/images/sunset.svg" alt="">
+                <%= locals.content.forecast.forecastday[0].astro.sunset%>
+              </h3>
+            </div>
           </div>
         </div>
       <% } else { %>

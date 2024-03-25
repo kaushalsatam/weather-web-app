@@ -56,7 +56,7 @@ div.weather-info-container{
     display: grid;
     gap: 2rem;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    grid-template-rows: 1fr 0.5fr;
 }
 
 div.weather-card{
@@ -71,7 +71,21 @@ div.weather-info-main{
 }
 
 div.weather-info-astronomy{
-    background-color: cornflowerblue;
+    padding: 50px;
+    background: rgb(255,215,0);
+    background: linear-gradient(90deg, rgba(255,215,0,1) 0%, rgba(0,206,209,1) 50%, rgba(255,99,71,1) 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div.weather-info-astronomy div h2{
+    text-align: center;
+}
+
+h3 span{
+    display: block;
+    text-align:center;
 }
 
 div.weather-info-forecast{
