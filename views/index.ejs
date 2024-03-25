@@ -32,16 +32,29 @@
       <% if(locals.content) { %>
         <div class="weather-info-container">
           <div class="weather-info-main weather-card">
-            <h1><%= locals.content.location.name%></h1>
-            <img
-              src="<%= locals.content.current.condition.icon%>"
-              alt="Current Condition"
-            />
-            <%= locals.content.current.condition.text%>
-            <%= locals.content.current.temp_c%>°C
-            <h2>
-              <%= locals.content.location.region%>, <%=locals.content.location.country%>
-            </h2>
+            <div class="weather-container">
+              <h1><img src="/assets/images/map-pinned.svg" alt="location"> <%= locals.content.location.name%></h1>
+              <span>
+                <%= locals.content.location.region%>, <%=locals.content.location.country%> | <%=locals.content.location.localtime%>
+              </span>
+              <div class="weather-flex">
+                <div class="weather-condition-image-container">
+                  <img
+                    src="<%= locals.content.current.condition.icon%>"
+                    alt="Current Condition"
+                    class="condition"
+                  />
+                  <p class="weather-condition"><%= locals.content.current.condition.text%></p>
+                </div>
+                <p class="temperature"><%= locals.content.current.temp_c%>°</p>C
+              </div>
+            </div>
+            <hr>
+            <div class="other-conditions">
+              <div><span>Wind</span> <img src="/assets/images/wind.svg" alt="Wind"> <%= locals.content.current.wind_kph%> kph</div>
+              <div><span>Humidity</span> <img src="/assets/images/droplets.svg" alt="Humidity"> <%= locals.content.current.humidity%>%</div>
+              <div><span>Chance of rain</span> <img src="/assets/images/cloud-rain.svg" alt="Chance of rain"> <%= locals.content.forecast.forecastday[0].day.daily_will_it_rain%>%</div>
+            </div>
           </div>
           <div class="weather-info-forecast weather-card">
 
