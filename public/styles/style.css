@@ -73,8 +73,13 @@ div.weather-card{
 
 div.weather-info-main{
     background-color: royalblue;
-    /* box-shadow: 5px 5px 5px 5px blue; */
+    box-shadow: 5px 5px 5px 5px black;
     padding: 20px;
+    transition: transform 0.3s ease;
+}
+
+div.weather-info-main:hover{
+    transform: scale(0.99);
 }
 
 div.weather-info-astronomy{
@@ -82,10 +87,15 @@ div.weather-info-astronomy{
     /* background: rgb(255,215,0); */
     /* background: linear-gradient(90deg, rgba(255,215,0,1) 0%, rgba(0,206,209,1) 50%, rgba(255,99,71,1) 100%); */
     background: linear-gradient(to right,  #808fff, #100088);
-    /* box-shadow: 5px 5px 5px 5px red; */
+    box-shadow: 5px 5px 5px 5px black;
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: transform 0.3s ease;
+}
+
+div.weather-info-astronomy:hover{
+    transform: scale(0.975);
 }
 
 div.weather-info-astronomy div h2{
