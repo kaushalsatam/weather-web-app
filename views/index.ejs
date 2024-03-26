@@ -56,9 +56,9 @@
               <div><span>Chance of rain</span> <img src="/assets/images/cloud-rain.svg" alt="Chance of rain"> <%= locals.content.forecast.forecastday[0].day.daily_chance_of_rain%>%</div>
             </div>
           </div>
-          <div class="weather-info-forecast weather-card">
+          <!-- <div class="weather-info-forecast weather-card">
             
-          </div>
+          </div> -->
           <div class="weather-info-astronomy weather-card">
             <div>
               <h2>Sunrise</h2>
@@ -79,9 +79,15 @@
             </div>
           </div>
         </div>
-      <% } else { %>
-      <span><%= locals.error %></span>
-      <% } %>
+      <% } else if(locals.error){ %>
+        <div class="greeting-container">
+          <h1 style="color: white;"><%= locals.error %></h1>
+        </div>
+      <% } else {%>
+        <div class="greeting-container">
+          <h1 style="color: white;">Welcome to <span style="color: blue;">ClearVue</span>: Weather Insights</h1>
+        </div>
+        <% } %>
     </div>
   </body>
 </html>

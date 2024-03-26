@@ -3,7 +3,7 @@
 }
 
 body{
-    background-color: black;
+    background-color: rgb(41, 41, 41);
     margin: 0;
     padding: 0;
 }
@@ -11,6 +11,13 @@ body{
 .container{
     height: fit-content;
     margin: 15px;
+}
+
+.greeting-container{
+    height: calc(100dvh - 75px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 header{
@@ -31,7 +38,7 @@ header{
 div#brand-name{
     color: whitesmoke;
     text-align: center;
-    padding: 20px;
+    padding: 20px 0px 20px 20px;
 }
 
 #search-box{
@@ -55,7 +62,7 @@ div#brand-name{
 div.weather-info-container{
     display: grid;
     gap: 2rem;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-template-rows: 1fr 0.5fr;
 }
 
@@ -66,14 +73,16 @@ div.weather-card{
 
 div.weather-info-main{
     background-color: royalblue;
-    box-shadow: 5px 5px 5px 5px royalblue;
+    /* box-shadow: 5px 5px 5px 5px blue; */
     padding: 20px;
 }
 
 div.weather-info-astronomy{
     padding: 50px;
-    background: rgb(255,215,0);
-    background: linear-gradient(90deg, rgba(255,215,0,1) 0%, rgba(0,206,209,1) 50%, rgba(255,99,71,1) 100%);
+    /* background: rgb(255,215,0); */
+    /* background: linear-gradient(90deg, rgba(255,215,0,1) 0%, rgba(0,206,209,1) 50%, rgba(255,99,71,1) 100%); */
+    background: linear-gradient(to right,  #808fff, #100088);
+    /* box-shadow: 5px 5px 5px 5px red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,10 +97,11 @@ h3 span{
     text-align:center;
 }
 
-div.weather-info-forecast{
-    background-color: gray;
+/* div.weather-info-forecast{
+    background-color: rgb(41, 41, 41);
     grid-row: span 2;
-}
+    visibility:hidden;
+} */
 
 div.weather-into-forecast{
     grid-row-start: 1;
@@ -139,4 +149,10 @@ div.other-conditions{
 div.other-conditions div span{
     display: block;
     margin: 5px;
+}
+
+@media (max-width:500px) {
+    p.temperature{
+        font-size: 5rem;
+    }
 }
