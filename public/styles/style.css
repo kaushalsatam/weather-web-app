@@ -79,7 +79,7 @@ div.weather-info-main{
 }
 
 div.weather-info-main:hover{
-    transform: scale(0.99);
+    transform: scale(0.975);
 }
 
 div.weather-info-astronomy{
