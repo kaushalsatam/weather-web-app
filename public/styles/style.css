@@ -28,6 +28,8 @@ header{
 
 #logo-container{
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #logo{
@@ -38,7 +40,7 @@ header{
 div#brand-name{
     color: whitesmoke;
     text-align: center;
-    padding: 20px 0px 20px 20px;
+    padding: 20px;
 }
 
 #search-box{
@@ -156,5 +158,11 @@ div.other-conditions div span{
 @media (max-width:500px) {
     p.temperature{
         font-size: 5rem;
+    }
+    
+    div#brand-name{
+    /* padding: 20px 0px 20px 10px; */
+    visibility: hidden;
+    display:none;
     }
 }
