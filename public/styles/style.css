@@ -84,8 +84,6 @@ div.weather-info-main:hover{
 
 div.weather-info-astronomy{
     padding: 50px;
-    /* background: rgb(255,215,0); */
-    /* background: linear-gradient(90deg, rgba(255,215,0,1) 0%, rgba(0,206,209,1) 50%, rgba(255,99,71,1) 100%); */
     background: linear-gradient(to right,  #808fff, #100088);
     box-shadow: 5px 5px 5px 5px black;
     display: flex;
@@ -106,12 +104,6 @@ h3 span{
     display: block;
     text-align:center;
 }
-
-/* div.weather-info-forecast{
-    background-color: rgb(41, 41, 41);
-    grid-row: span 2;
-    visibility:hidden;
-} */
 
 div.weather-into-forecast{
     grid-row-start: 1;
