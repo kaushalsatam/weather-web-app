@@ -161,8 +161,7 @@ div.other-conditions div span{
     }
     
     div#brand-name{
-    /* padding: 20px 0px 20px 10px; */
-    visibility: hidden;
-    display:none;
+        visibility: hidden;
+        display:none;
     }
 }

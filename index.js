@@ -23,8 +23,6 @@ app.post("/get-weather", async (req, res) => {
                     'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
                 }
             });
-        // const data = JSON.stringify(response.data);
-        // console.log(data);
         res.render("index.ejs", { content: response.data })
     } catch (error) {
         console.error(error.message);
