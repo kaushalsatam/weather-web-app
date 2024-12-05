@@ -1,6 +1,9 @@
 import express from "express";
 import bodyParser from "body-parser";
 import axios from "axios";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 const app = express();
 const port = 3000;
@@ -19,8 +22,8 @@ app.post("/get-weather", async (req, res) => {
         const response = await axios.get(`https://weatherapi-com.p.rapidapi.com/forecast.json?q=${location}`,
             {
                 headers: {
-                    'X-RapidAPI-Key': 'a6ffe1718emsh4d92d1af41a38b7p13e698jsn1fee7fb14e94',
-                    'X-RapidAPI-Host': 'weatherapi-com.p.rapidapi.com'
+                    'X-RapidAPI-Key': process.env.RAPID_API_KEY,
+                    'X-RapidAPI-Host': process.env.RAPID_API_HOST
                 }
             });
         res.render("index.ejs", { content: response.data })
